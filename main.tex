@@ -49,8 +49,20 @@ The fMRI and DTI data will be used to generate brain connectomes for all patient
 We should not be surprised if deep brain stimulation does not yield positive results in the older age group because a decline in cognitive functioning is common in Parkinson's patients over 70 years of age undergoing DBS.
 
 \section{Data Processing and Information Extraction}
+An automated pipeline will be used to create connectome data before and after Deep Brain Stimulation. \cite{Pipeline} Graph analysis will be conducted between the images to detect any noticeable changes. Statistical analysis will determine whether these changes are indicative of any improvements in the subject's condition. The level of computation needed to process 1mm voxel size image data sets can be done locally rather quickly or by sending jobs to a super computer.
 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=75mm, scale=1]{matrix}
+\caption{Here is a similar process conducted without DBS. \cite{Pipeline}}
+\label{fig:method}
+\end{figure}
 \section{Data Storage}
+
+\subsection{Short-Term Quick Access}
+    The cost for uploading data online for quick public access is $1150$ per month and $13800$ per year for the first 50tb of data. We do not expect to produce data sets larger than this considering the low resolution of MRI images. \cite{AWS}
+\subsection{Long-Term Slow Access}
+    The cost for uploading data online for delayed private access is $200$ per month and $24000$ per 10 years for 50tb. \cite{AWS}
 
 \\section{Estimated Cost}
 
@@ -58,11 +70,17 @@ We should not be surprised if deep brain stimulation does not yield positive res
 
 \begin{thebibliography}{9}
 
+
 \bibitem{Alzheimer's Facts} 
 National Institute on Aging. 
 \textit{Alzheimer's Disease Fact Sheet}. 
 National Institute on Aging, National Institutes of Health, Bethesda, Maryland, 2019.
 \\\texttt{https://www.nia.nih.gov/health/alzheimers-disease-fact-sheet}
+
+\bibitem{AWS}
+Amazon Web Services.
+\textit{Amazon S3 pricing}
+\\\texttt{https://aws.amazon.com/s3/pricing/?nc=sn\&loc=4}
 
 \bibitem{DBS uses} 
 Mayo Clinic Staff. 
@@ -91,6 +109,12 @@ Andreas Horn, Martin Reich, Johannes Vorwerk, Ningfei Li, Gregor Wenzel, Qianqia
 \textit{Connectivity Predicts Deep Brain Stimulation Outcome in Parkinson Disease}
 Annals of Neurology, U.S. National Library of Medicine, July 2017.
 \\\texttt{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5880678/}
+
+\bibitem{Pipeline}
+Andre Santos Ribeiro, Luis Miguel Lacerda, Nuno Andre da Silva, Hugo Alexandre Ferreira.
+\textit{Multimodel imaging brainy connectivity analysis (MIBCA) toolbox: preliminary application to Alzheimer's disease}
+EJNMMI physics vol. 1, 2014.
+\\\texttt{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4545458/}
 
 \end{thebibliography}
 
